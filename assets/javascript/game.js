@@ -5,15 +5,25 @@ var s;
 var count = 0;
 var answerArray = [];
 
-function startUp ()
+function startUp()
 {
-    for (var i = 0; i < randomWord.length; i++); 
+    for (var i = 0; i < randomWord.length; i++) 
     {
         answerArray[i] = "_";
     }
     s = answerArray.join(" ");
     document.getElementById("answer").innerHTML = s; 
 }
+
+// function wincondition {
+    // Take existing answer array, loop through it, and check it for underscores. If no underscores, then you've won.
+    // Image pop-up. Congrats! (Pop-up or alert)
+    // Dismiss pop-up.
+    // Move on to next word.
+    // NOTE: I'll need a "for loop" that checks for every answer in the array.
+    // NOTE: Or, you could also use a string method. Index of method: https://www.w3schools.com/jsref/jsref_indexof.asp
+    // Better explanation: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf
+// }
 
 function Letter()
 {
