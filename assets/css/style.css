@@ -6,7 +6,7 @@
     font-family: 'Anton', sans-serif;
     color: black; 
     text-align: center; 
-    background-color: black; 
+    background-color: white; 
   }
 
   .container {
@@ -29,12 +29,19 @@
     height: 500px; 
   }
 
+  @media only screen and (max-width: 1292px) {
+    #animalbanner {
+      height: 300px; 
+      margin-top: 100px; 
+    }
+  }  
+
   #contentbubble {
     height: 400px; 
   }
 
   #rightsection {
-    background-image: url("../images/bubble_smaller.png");
+    background-color: white; 
   }
 
   .footer {
