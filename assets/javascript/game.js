@@ -5,6 +5,8 @@ console.log(randomWord);
 var s;
 var count = 0;
 var answerArray = [];
+var wins = 0; 
+var losses = 0; 
 
 function startUp() {
     for (var i = 0; i < randomWord.length; i++) {
@@ -32,6 +34,8 @@ function Letter() {
     if (count > 3) {
         document.getElementById("stat").innerHTML = "Keep on trying!";
     }
+    
+   document.getElementById("letter").value = "";
 
 }
 
@@ -39,6 +43,12 @@ function winCondition() {
 
     if (randomWord === answerArray.join('')) {
         alert('You Win!');
-        document.location.reload(); 
+        wins++;
+        document.getElementById("wins").innerHTML = "Wins: " + wins; 
+        count = 0;
+        answerArray = [];
+        randomWord = randomWordArr[Math.floor(Math.random() * randomWordArr.length)];
+        startUp()
     }
 }
+
