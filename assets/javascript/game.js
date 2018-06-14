@@ -18,6 +18,7 @@ function startUp() {
 
 function Letter() {
     var letter = document.getElementById("letter").value;
+    letter = letter.toLowerCase(); 
 
     if (letter.length > 0) {
         for (var i = 0; i < randomWord.length; i++) {
